@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контактък</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
@@ -46,10 +46,35 @@
         </section>
     </main>
 
+    <button id="openDialog" type="button">Написать нам</button>
+
+    <dialog id="contactDialog" aria-labelledby="dialogtitle">
+        <h2 id="dialogTitle">Обратная связь</h2>
+        <form id="contactForm" method="dialog" novalidate>
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+
+            <label for="Email">E-mail</label>
+            <input id="Email" name="E-mail" type="text" required autocomplete="email">
+
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+            <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+
+            <label for="message">Сообщение</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+            <div class="form-actions">
+                <button type="button" id="closeDialog">Закрыть</button>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </dialog>
+
     <!-- Подвал сайта -->
     <footer>
         <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
+
 </body>
 </html>
