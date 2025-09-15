@@ -114,6 +114,145 @@ html{
     margin: 0 0 var(--space-3);
 }
 
-.site-nav_link {
+.site-nav__link {
     color: var(--color-fg);
+    text-decoration: none;
+}
+.site-nav__link:hover {
+    text-decoration: underline;
+}
+
+.site-nav__link--active {
+    font-weight: bold;
+}
+
+.modal {
+    padding: 0; 
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: min(90vw, 600px);
+    background: var(--color-bg);
+    color: var(--color-fg);
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); 
+}
+
+.modal__content {
+    padding: var(--space-4); 
+}
+
+.modal__title {
+    margin: 0 0 var(--space-3); 
+    color: var(--color-fg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3); 
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.form__label {
+    font-weight: 500;
+    color: var(--color-fg);
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+    width: 100%;
+    padding: var(--space-2) var(--space-3); 
+    border: 1px solid var(--color-muted);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.form__help {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin-top: var(--space-1);
+}
+
+.form__error {
+    font-size: 0.875rem;
+    color: var(--color-danger);
+    margin-top: var(--space-1);
+    display: none;
+}
+
+.form__error--visible {
+    display: block;
+}
+
+.button {
+    padding: var(--space-2) var(--space-4);
+    border: none;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.button--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.button--primary:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}
+
+.button--secondary {
+    background: transparent;
+    color: var(--color-fg);
+    border: 1px solid var(--color-muted);
+}
+
+.button--secondary:hover {
+    background: var(--color-muted);
+    color: var(--color-bg);
+}
+
+.form__actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    justify-content: flex-end;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.button:disabled:hover {
+    filter: none;
+    transform: none;
 }

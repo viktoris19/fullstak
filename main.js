@@ -31,9 +31,17 @@ form?.addEventListener('submit', (e) => {
 
         // Ally: подсветка проблемных полей
         [...form.elements].forEach(el => {
-            if (el.willValidate) el.toggleAttribute('aria-invalid', !el.checkValidity());
+            if (el.willValidate) {
+                const isValid = el.checkValidity();
+                el.toggleAttribute('aria-invalid', !isValid);
+        
+        // Показываем/скрываем сообщение об ошибке
+            const errorElement = document.getElementById(`${el.id}-error`);
+            if (errorElement) {
+                errorElement.classList.toggle('form__error--visible', !isValid);
+            }
+            }
         });
-        return;
     }
 
     // 3) Успешная «отправка» (без сервера)
