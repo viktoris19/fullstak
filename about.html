@@ -7,6 +7,7 @@
     <meta name="description" content="Узнайте больше о нашей компании и истории">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -14,7 +15,7 @@
         <!-- Главное меню навигации -->
         <nav class="site-nav">
             <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link " href="index.html">Главная</a></li>
                 <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="about.html">О нас</a></li>
                 <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="contacts.html">Контакты</a></li>
             </ul>
@@ -34,6 +35,18 @@
             <p>Все началось в 2021 году, когда я прошла курсы....А дальше все как в тумане</p>
         </section>
     </main>
+
+    <!-- Секция с видео -->
+<section class="section">
+    <h2>Коротко о нашей работе</h2>
+    <div class="media">
+        <video class="media__video" controls preload="metadata" playsinline width="960" height="540" poster="assets/video-poster.jpg">
+            <source src="video.MP4" type="video/mp4">
+            <track kind="captions" srclang="ru" src="assets/captions-ru.vtt" label="Русские субтитры" default>
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>

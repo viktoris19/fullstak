@@ -20,6 +20,11 @@
     --shadow: 0 1px 2px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.08);
 }
 
+img{
+    width: 200px;
+    height: 200px;
+}
+
 body.theme-dark{
     --color-bg:#0b0b0b;
     --color-fg: #f5f5f5;
@@ -255,4 +260,39 @@ html{
 .button:disabled:hover {
     filter: none;
     transform: none;
+}
+
+.hero {
+    background:
+        linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+        url("\ fon.jpg") center/cover no-repeat;
+    color: white;
+    padding: var(--space-5) var(--space-4);
+    text-align: center;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-5);
+}
+
+.hero__title {
+    margin: 0 0 var(--space-3);
+    font-size: 2.5rem;
+}
+
+.hero__subtitle {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.media {
+    aspect-ratio: 16/9;
+    width: min(100%, 960px);
+    margin-inline: auto;
+}
+
+.media iframe,
+.media video {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: var(--radius);
 }
